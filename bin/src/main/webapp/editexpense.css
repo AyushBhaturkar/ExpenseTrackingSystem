@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f3f4f6; /* Soft neutral grey */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card container for the edit form */
+form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 450px;
+    border-top: 5px solid #f59e0b; /* Amber accent bar at the top */
+}
+
+/* Form Title Header */
+form::before {
+    content: "Update Expense Details";
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 25px;
+}
+
+/* Input Group Styling */
+input[type="text"], 
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #374151;
+    background-color: #fafafa;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Label text styling */
+form {
+    color: #4b5563;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Focus state for inputs */
+input:focus {
+    outline: none;
+    border-color: #f59e0b;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+    background-color: #ffffff;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #1f2937; /* Charcoal Gray */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #374151;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Hiding the ID line visually since it's a hidden input */
+input[type="hidden"] + br {
+    display: none;
+}
